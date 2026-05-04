@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Harpio design system — light + violet */
+
+@layer base {
+  :root {
+    /* Surfaces */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 8%;
+
+    --surface: 240 20% 98%;
+    --surface-muted: 240 14% 96%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 8%;
+
+    /* Brand — vibrant violet to magenta */
+    --primary: 270 91% 58%;            /* #8B5CF6 -> #A855F7 family */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 280 90% 65%;
+    --primary-deep: 262 83% 48%;
+
+    --accent-magenta: 320 90% 60%;     /* gradient end */
+    --accent-pink: 340 90% 60%;
+
+    --secondary: 240 14% 96%;
+    --secondary-foreground: 240 10% 8%;
+
+    --muted: 240 14% 96%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 270 91% 95%;
+    --accent-foreground: 270 91% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 14% 92%;
+    --border-strong: 240 10% 85%;
+    --input: 240 14% 92%;
+    --ring: 270 91% 58%;
+
+    --radius: 1rem;
+
+    /* Dark surfaces for contrast cards (mockups, code blocks) */
+    --dark-card: 240 25% 10%;
+    --dark-card-foreground: 240 14% 96%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 91% 58%), hsl(320 90% 60%));
+    --gradient-text: linear-gradient(135deg, hsl(270 91% 58%) 0%, hsl(340 90% 60%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(270 100% 98%) 100%);
+    --gradient-hero-bg: radial-gradient(ellipse at top right, hsl(270 91% 95%) 0%, transparent 60%),
+                        radial-gradient(ellipse at bottom left, hsl(320 90% 96%) 0%, transparent 50%);
+
+    /* Shadows */
+    --shadow-soft: 0 1px 3px hsl(240 10% 8% / 0.04), 0 4px 12px hsl(240 10% 8% / 0.04);
+    --shadow-card: 0 4px 20px -4px hsl(270 50% 30% / 0.08), 0 2px 6px hsl(240 10% 8% / 0.04);
+    --shadow-elevated: 0 20px 60px -20px hsl(270 60% 30% / 0.18), 0 8px 24px -8px hsl(240 10% 8% / 0.08);
+    --shadow-glow: 0 0 60px hsl(270 91% 58% / 0.25);
+    --shadow-button: 0 4px 14px hsl(270 91% 58% / 0.4);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 10% 8%;
+    --sidebar-primary: 270 91% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 14% 96%;
+    --sidebar-accent-foreground: 240 10% 8%;
+    --sidebar-border: 240 14% 92%;
+    --sidebar-ring: 270 91% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04';
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-bold tracking-tight;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-hero {
+    background: var(--gradient-hero-bg), hsl(var(--background));
+  }
+}
