@@ -1,6 +1,7 @@
 import { Star } from "lucide-react";
+import { toast } from "sonner";
 import HarpioLogo from "./HarpioLogo";
-import cornerstoneLogo from "@/assets/cornerstone-logo.png";
+import mercadoBitcoinLogo from "@/assets/mercadobitcoin-logo.png";
 
 const Hero = () => {
   return (
@@ -8,14 +9,14 @@ const Hero = () => {
       <div className="container max-w-[1240px] px-5 pb-24 pt-12 md:pb-32 md:pt-16">
         {/* Logo */}
         <div className="mb-16 flex items-center gap-5 md:mb-24">
-          <HarpioLogo />
+          <HarpioLogo className="h-9 w-auto" />
           <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-            em parceria
+            proposta para
           </span>
           <img
-            src={cornerstoneLogo}
-            alt="Cornerstone"
-            className="h-8 w-auto object-contain"
+            src={mercadoBitcoinLogo}
+            alt="Mercado Bitcoin"
+            className="h-10 w-auto object-contain"
           />
         </div>
 
@@ -63,7 +64,10 @@ const Hero = () => {
                 </div>
               </div>
 
-              <button className="group relative inline-flex items-center justify-center rounded-full bg-gradient-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-button transition-smooth hover:scale-[1.02] hover:shadow-glow">
+              <button
+                onClick={() => toast("Escolha sua vaga crítica e confie na Harpio")}
+                className="group relative inline-flex items-center justify-center rounded-full bg-gradient-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-button transition-smooth hover:scale-[1.02] hover:shadow-glow"
+              >
                 Acessar o estudo da sua vaga
               </button>
             </div>
