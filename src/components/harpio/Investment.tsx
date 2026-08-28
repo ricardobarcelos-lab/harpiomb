@@ -82,9 +82,9 @@ const Investment = () => {
         </div>
 
         <p className="text-xs text-muted-foreground text-center mt-6">
-          <span className="text-primary font-semibold">*</span> Os valores demonstrados não consideram os impostos
-          de <span className="font-semibold text-foreground">14,25%</span>. Valores referenciais. Faixa 8 (acima
-          de R$ 35k) atendida sob demanda com escopo customizado.
+          <span className="text-primary font-semibold">*</span> Os valores demonstrados são líquidos de impostos
+          e não consideram os impostos de <span className="font-semibold text-foreground">14,25%</span>. Valores
+          referenciais. Faixa 8 (acima de R$ 35k) atendida sob demanda com escopo customizado.
         </p>
         <p className="text-xs text-muted-foreground text-center mt-2">
           <span className="text-primary font-semibold">**</span> Garantia: os meses de reposição estão cobertos sob
