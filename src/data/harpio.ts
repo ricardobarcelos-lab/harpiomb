@@ -17,7 +17,7 @@ export const pricingTiers: PricingTier[] = [
   { faixa: 4, start: 12001, final: 15000, ato1: 5250, ato2: 7500, ato3: 6000, ato4: 3000, total: 21750, garantia: "4 meses" },
   { faixa: 5, start: 15001, final: 20000, ato1: 7000, ato2: 10000, ato3: 8000, ato4: 4000, total: 29000, garantia: "5 meses" },
   { faixa: 6, start: 20001, final: 25000, ato1: 8750, ato2: 12500, ato3: 10000, ato4: 5000, total: 36250, garantia: "6 meses" },
-  { faixa: 7, start: 25001, final: 35000, ato1: 12250, ato2: 17500, ato3: 14000, ato4: 7000, total: 50750, garantia: "7 meses" },
+  { faixa: 7, start: 25001, final: 35000, ato1: 12500, ato2: 17500, ato3: 14000, ato4: 7000, total: 51000, garantia: "7 meses" },
   { faixa: 8, start: 35001, final: 50000, ato1: 17500, ato2: 25000, ato3: 20000, ato4: 10000, total: 72500, garantia: "sob demanda" },
 ];
 
